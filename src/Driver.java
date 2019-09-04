@@ -1,4 +1,5 @@
 import games.Blackjack;
+import games.TicTacToe;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,9 +17,20 @@ public class Driver
         ArrayList<Integer> deck = createDeck();
         Collections.shuffle(deck);
 
-        Blackjack blackjack = new Blackjack(deck, input);
+        System.out.println("Choose a game:");
+        System.out.println("[1] Blackjack");
+        System.out.println("[2] Tic Tac Toe");
+        int game = input.nextInt();
 
-        blackjack.playOneGame();
+        switch (game) {
+            case 1:
+                Blackjack blackjack = new Blackjack(deck, input);
+                blackjack.playOneGame();
+                break;
+            case 2:
+                TicTacToe ticTacToe = new TicTacToe(input);
+                ticTacToe.playGame();
+        }
 
         input.close();
     }
