@@ -1,12 +1,13 @@
-import games.Blackjack;
-import games.TicTacToe;
+package main;
+
+import main.games.Blackjack;
+import main.games.TicTacToe;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Driver
-{
+public class Driver {
 
     private static int DECK_SIZE = 50;
 
