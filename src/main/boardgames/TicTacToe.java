@@ -1,9 +1,11 @@
-package main.games;
+package main.boardgames;
+
+import main.cardgames.Game;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class TicTacToe {
+public class TicTacToe implements Game {
 
     private char playerA = 'X';
     private char comp = 'O';
