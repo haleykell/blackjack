@@ -1,4 +1,4 @@
-package me.haleykell.games;
+package me.haleykell.boardgames;
 
 import java.util.Random;
 import java.util.Scanner;
