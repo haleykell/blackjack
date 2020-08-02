@@ -1,4 +1,4 @@
-package main.games;
+package me.haleykell.games;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -22,7 +22,9 @@ public class TicTacToe {
     // playGame then returns the symbol of the winner
     // and '-' if there is a tie
     public void playGame() {
-        printBoard();
+        System.out.println("0 1 2");
+        System.out.println("3 4 5");
+        System.out.println("6 7 8");
 
         while (!isFull() && detectWinner() == '-') {
 

@@ -1,4 +1,4 @@
-package main.games;
+package me.haleykell.games;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,8 +27,7 @@ public class Blackjack {
     public void playOneGame() {
         int winner;
 
-        while (deck.size() > 4)
-        {
+        while (deck.size() > 4) {
             System.out.println("New hand.");
 
             this.dealer = new ArrayList<>();
@@ -61,7 +60,7 @@ public class Blackjack {
         showCardsDealer(dealer);
 
         System.out.println("Would you like to hit?");
-        String response = input.nextLine();
+        String response = input.next();
 
         while (response.equalsIgnoreCase("yes")) {
             hit(player);
@@ -72,13 +71,12 @@ public class Blackjack {
             System.out.println("Sum: " + sumCards(player));
 
             if (sumCards(player) > MAX) {
-                System.out.println("Dealer gets a point.");
-                System.out.println();
+                System.out.println("Dealer gets a point.\n");
                 return 2;
             }
 
             System.out.println("Would you like to hit?");
-            response = input.nextLine();
+            response = input.next();
         }
 
         System.out.println("Dealer's cards:");
@@ -98,28 +96,23 @@ public class Blackjack {
         System.out.println("Dealer's sum: " + sum);
 
         if (sumCards(player) > MAX) {
-            System.out.println("Dealer gets a point.");
-            System.out.println();
+            System.out.println("Dealer gets a point.\n");
             return DEALER_WIN;
         }
         if (sumCards(dealer) > MAX) {
-            System.out.println("You get a point.");
-            System.out.println();
+            System.out.println("You get a point.\n");
             return PLAYER_WIN;
         }
         if (sumCards(player) > sumCards(dealer)) {
-            System.out.println("You get a point.");
-            System.out.println();
+            System.out.println("You get a point.\n");
             return PLAYER_WIN;
         }
         if (sumCards(dealer) > sumCards(player)) {
-            System.out.println("Dealer gets a point.");
-            System.out.println();
+            System.out.println("Dealer gets a point.\n");
             return DEALER_WIN;
         }
         if (sumCards(dealer) == sumCards(player)) {
-            System.out.println("No points.");
-            System.out.println();
+            System.out.println("No points.\n");
             return 0;
         }
 
@@ -132,25 +125,20 @@ public class Blackjack {
         for (Integer card : cards) {
             sum = sum + card;
         }
-
         return sum;
     }
 
     private void showGameState() {
         // Show number of points for the player and the dealer
         System.out.println("The dealer has " + dealerPoints + " points.");
-        System.out.println("You have " + playerPoints + " points.");
-        System.out.println();
+        System.out.println("You have " + playerPoints + " points.\n");
     }
 
     private void showCards(ArrayList<Integer> cards) {
         // Sort the cards to make it easier for the user to know what they have
         Collections.sort(cards);
 
-        for (Integer i: cards) {
-            System.out.print(i + " ");
-        }
-
+        cards.forEach(i -> System.out.print(i + " "));
         System.out.println();
     }
 

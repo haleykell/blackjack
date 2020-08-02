@@ -1,7 +1,7 @@
-package main;
+package me.haleykell;
 
-import main.games.Blackjack;
-import main.games.TicTacToe;
+import me.haleykell.games.Blackjack;
+import me.haleykell.games.TicTacToe;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,8 +11,7 @@ public class Driver {
 
     private static int DECK_SIZE = 50;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         ArrayList<Integer> deck = createDeck();
@@ -36,19 +35,14 @@ public class Driver {
         input.close();
     }
 
-    private static ArrayList<Integer> createDeck()
-    {
+    private static ArrayList<Integer> createDeck() {
         // Create a deck of cards
         ArrayList<Integer> pool = new ArrayList<>();
         int index = 0;
-        while (index < DECK_SIZE)
-        {
+        while (index < DECK_SIZE) {
             pool.add(index % 10 + 1);
             ++index;
         }
         return pool;
     }
-
-
-
 }
