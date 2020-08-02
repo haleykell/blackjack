@@ -2,11 +2,11 @@
 
 ## Includes:
 1. Blackjack
-2. Tic Tac Toe
+1. Tic Tac Toe
+1. Go Fish
 
 ## Planned:
 1. Connect Four
-2. Go Fish
-3. Hangman
-4. Chutes and Ladders
-5. Ice Sliding puzzle
+1. Hangman
+1. Chutes and Ladders
+1. Ice Sliding puzzle
